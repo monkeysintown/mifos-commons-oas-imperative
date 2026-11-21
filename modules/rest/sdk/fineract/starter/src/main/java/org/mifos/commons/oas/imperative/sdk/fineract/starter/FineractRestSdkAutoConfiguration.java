@@ -20,5 +20,5 @@ import org.springframework.context.annotation.Import;
 @EnableConfigurationProperties({FineractRestSdkProperties.class})
 @ComponentScan(MIFOS_COMMONS_OAS_IMPERATIVE_SDK_FINERACT_CORE_PACKAGE)
 @ComponentScan(MIFOS_COMMONS_OAS_IMPERATIVE_SDK_FINERACT_IMPLEMENTATION_PACKAGE)
-@Import(FineractRestSdkProperties.class)
+@Import(FineractRestSdkConfiguration.class)
 final class FineractRestSdkAutoConfiguration {}

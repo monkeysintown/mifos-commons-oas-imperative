@@ -7,23 +7,7 @@ package org.mifos.commons.oas.imperative.rest.sdk.fineract.core;
 
 import static org.mifos.commons.oas.imperative.rest.sdk.fineract.core.FineractRestSdkConstants.MIFOS_COMMONS_OAS_IMPERATIVE_SDK_FINERACT_PROPERTIES_PREFIX;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@Builder
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @ConfigurationProperties(prefix = MIFOS_COMMONS_OAS_IMPERATIVE_SDK_FINERACT_PROPERTIES_PREFIX)
-public class FineractRestSdkProperties {
-    @Builder.Default
-    private Boolean enabled = true;
-
-    private String url;
-    private String username;
-    private String password;
-    private String token;
-}
+public record FineractRestSdkProperties(Boolean enabled, String url, String username, String password, String token) {}
